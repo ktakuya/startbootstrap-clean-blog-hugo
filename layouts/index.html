@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+<body>
+{{ partial "navigation.html" . }}
+
+{{ partial "title-page-header.html" . }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      {{ range first 10 (where .Data.Pages "Section" "post") }}
+        {{ .Render "summary" }}
+      {{ end }}
+      <!-- Pager -->
+      <ul class="pager">
+        <li class="next">
+          <a href="#">Older Posts &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>
