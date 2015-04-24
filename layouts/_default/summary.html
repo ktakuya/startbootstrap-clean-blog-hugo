@@ -7,6 +7,13 @@
       {{ .Summary }}
     </h3>
   </a>
-  <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on {{ .Date.Format "Jan 2, 2006"}}</p>
+  <p class="post-meta">Posted by
+    <a href="/">
+      {{ if isset .Site.Params "author" }}
+        {{ .Site.Params.author }}
+      {{ else }}
+        Start Bootstrap
+      {{ end }}
+    </a> on {{ .Date.Format "Jan 2, 2006"}}</p>
 </div>
 <hr>

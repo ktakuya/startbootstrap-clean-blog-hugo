@@ -7,7 +7,16 @@
         <div class="post-heading">
           <h1>{{ .Title }}</h1>
           <h2 class="subheading">{{ .Summary }}</h2>
-          <span class="meta">Posted by <a href="#">Start Bootstrap</a> on {{ .Date.Format "Jan 2, 2006"}}</span>
+          <span class="meta">
+            Posted by
+            <a href="/">
+              {{ if isset .Site.Params "author" }}
+                {{ .Site.Params.author }}
+              {{ else }}
+                Start Bootstrap
+              {{ end }}
+            </a> on {{ .Date.Format "Jan 2, 2006"}}
+          </span>
         </div>
       </div>
     </div>
