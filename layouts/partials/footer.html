@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center">
-          {{ if isset .Site.Params "Twitter"}}
+          {{ if isset .Site.Params "twitter"}}
           <li>
-            <a href="https://twitter.com/{{ .Site.Params.Twitter }}">
+            <a href="https://twitter.com/{{ .Site.Params.twitter }}">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -14,9 +14,9 @@
             </a>
           </li>
           {{ end }}
-          {{ if isset .Site.Params "Facebook" }}
+          {{ if isset .Site.Params "facebook" }}
           <li>
-            <a href="https://www.facebook.com/{{ .Site.Params.Facebook}}">
+            <a href="https://www.facebook.com/{{ .Site.Params.facebook}}">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -24,9 +24,9 @@
             </a>
           </li>
           {{ end }}
-          {{ if isset .Site.Params "Github" }}
+          {{ if isset .Site.Params "github" }}
           <li>
-            <a href="https://github.com/{{ .Site.Params.Github }}">
+            <a href="https://github.com/{{ .Site.Params.github }}">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
