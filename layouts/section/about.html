@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+
+{{ partial "navigation.html" . }}
+{{ partial "about-page-header.html" . }}
+
+  <!-- Post Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{ range first 1 .Data.Pages }}
+          {{ .Content }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <hr>
+{{ partial "footer.html" . }}
